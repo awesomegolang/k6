@@ -19,12 +19,16 @@ environment:
 
 # prepare system and project
 install:
+  - set
   - choco install wixtoolset pandoc -y
+  - set
   - refreshenv
+  - set
   # ensure wix is available in PATH
   - set PATH=%WIX%\bin;%PATH%
   # specific to go
   - set PATH=%GOPATH%\bin;%PATH%
+  - set
 
 
 # build msi artifacts
@@ -39,6 +43,7 @@ build_script:
 
 test_script:
   - cd %APPVEYOR_BUILD_FOLDER%
+  - set
   - go test ./...
 
 deploy_script:
