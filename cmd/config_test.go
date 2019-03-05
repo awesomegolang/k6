@@ -43,6 +43,10 @@ import (
 	"gopkg.in/guregu/null.v3"
 )
 
+func init() {
+	fmt.Printf("init environment: %#q", os.Environ())
+}
+
 type testCmdData struct {
 	Name  string
 	Tests []testCmdTest
