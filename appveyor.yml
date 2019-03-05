@@ -19,6 +19,7 @@ environment:
 
 # prepare system and project
 install:
+  - set
   - choco install wixtoolset pandoc -y
   - refreshenv
   # ensure wix is available in PATH
