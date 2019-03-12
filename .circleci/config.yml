@@ -176,10 +176,6 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - test-go110:
-          filters:
-            tags:
-              only: /.*/
       - test-go112:
           filters:
             tags:
